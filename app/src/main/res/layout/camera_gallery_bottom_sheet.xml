@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/camera_gallery_bottom_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:behavior_hideable="true"
+    android:background="@drawable/bottom_sheet_rounded_top_white_background"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <View
+            android:id="@+id/view_separator_drop_down"
+            android:layout_width="100dp"
+            android:layout_height="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/gray_bottom_sheet_view"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_capture_from_camera"
+            android:layout_below="@+id/view_separator_drop_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:theme="@style/MaterialTheme"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="1dp"
+            app:rippleColor="@color/mcvRippleColor"
+            app:strokeWidth="0dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_capture_from_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp">
+
+                <ImageView
+                    android:id="@+id/imv_capture_from_camera"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:importantForAccessibility="no"
+                    android:padding="1dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_camera_outlined" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_capture_from_camera"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@+id/imv_capture_from_camera"
+                    android:layout_toRightOf="@+id/imv_capture_from_camera"
+                    android:padding="5dp"
+                    android:text="@string/capture_from_camera"
+                    android:textAllCaps="false"
+                    android:textColor="@color/appBlueColor"
+                    android:textSize="15sp"
+                    android:theme="@style/MaterialTheme"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_pick_from_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mcv_capture_from_camera"
+            android:clickable="true"
+            android:focusable="true"
+            android:theme="@style/MaterialTheme"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="1dp"
+            app:rippleColor="@color/mcvRippleColor"
+            app:strokeWidth="0dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_pick_from_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp">
+
+                <ImageView
+                    android:id="@+id/imv_pick_from_gallery"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:importantForAccessibility="no"
+                    android:padding="1dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_gallery_outlined"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_pick_from_gallery"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toEndOf="@+id/imv_pick_from_gallery"
+                    android:layout_toRightOf="@+id/imv_pick_from_gallery"
+                    android:padding="5dp"
+                    android:text="@string/pick_from_gallery"
+                    android:textAllCaps="false"
+                    android:textColor="@color/appBlueColor"
+                    android:textSize="15sp"
+                    android:theme="@style/MaterialTheme"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

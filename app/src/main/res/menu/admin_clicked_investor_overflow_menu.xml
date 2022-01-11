@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/group_edit_investor">
+        <item
+            android:id="@+id/action_edit_investor"
+            android:orderInCategory="1"
+            android:title="@string/edit_investor"
+            app:showAsAction="never" />
+    </group>
+
+    <group android:id="@+id/group_delete_investor">
+        <item
+            android:id="@+id/action_delete_investor"
+            android:orderInCategory="2"
+            android:title="@string/delete_investor"
+            app:showAsAction="never" />
+    </group>
+
+</menu>

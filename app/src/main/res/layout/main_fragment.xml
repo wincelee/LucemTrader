@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragments_background"
+    tools:context=".fragments.MainFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_crypto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/main_nsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="15dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcv_crypto_top_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:theme="@style/MaterialTheme"
+                    app:cardBackgroundColor="@color/secondaryLightColor"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPadding="5dp"
+                    app:rippleColor="@color/mcvRippleSecondaryLightColor15"
+                    app:strokeWidth="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_avatar_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imv_avatar"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:background="@drawable/civ_profile_background"
+                                android:importantForAccessibility="no"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_profile"
+                                app:civ_border_color="@android:color/white"
+                                app:civ_border_overlay="true"
+                                app:civ_border_width="1dp" />
+
+                            <TextView
+                                android:id="@+id/tv_phone_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imv_avatar"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="@string/amanda_cris"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="15sp" />
+
+                        </RelativeLayout>
+
+                        <View
+                            android:id="@+id/view_separator_avatar_username"
+                            android:layout_width="1dp"
+                            android:layout_height="130dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/rl_avatar_user_name"
+                            android:layout_toRightOf="@+id/rl_avatar_user_name"
+                            android:background="@color/colorWhite20" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/view_separator_avatar_username"
+                            android:layout_toRightOf="@+id/view_separator_avatar_username"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="10dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_start_btc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp">
+
+                                <TextView
+                                    android:id="@+id/tv_display_start_btc"
+                                    style="@style/TextAppearance.AppCompat.Large"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_toStartOf="@+id/tv_start_btc"
+                                    android:layout_toLeftOf="@+id/tv_start_btc"
+                                    android:text="@string/start_btc"
+                                    android:textColor="#112B4D"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_start_btc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/_0_000"
+                                    android:textColor="#112B4D"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_current_btc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_start_btc"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp">
+
+                                <TextView
+                                    android:id="@+id/tv_display_current_btc"
+                                    style="@style/TextAppearance.AppCompat.Large"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_toStartOf="@+id/tv_current_btc"
+                                    android:layout_toLeftOf="@+id/tv_current_btc"
+                                    android:text="@string/current_btc"
+                                    android:textColor="#112B4D"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_current_btc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/_0_000"
+                                    android:textColor="#112B4D"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_profit_loss"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_current_btc"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp">
+
+                                <TextView
+                                    android:id="@+id/tv_display_profit_loss"
+                                    style="@style/TextAppearance.AppCompat.Large"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_toStartOf="@+id/tv_profit_loss"
+                                    android:layout_toLeftOf="@+id/tv_profit_loss"
+                                    android:text="@string/profit_loss_btc"
+                                    android:textColor="#112B4D"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_profit_loss"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/_0_000"
+                                    android:textColor="#112B4D"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_profit_loss_percentage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/rl_profit_loss"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:paddingTop="1dp"
+                                android:paddingBottom="1dp">
+
+                                <TextView
+                                    android:id="@+id/tv_display_profit_loss_percentage"
+                                    style="@style/TextAppearance.AppCompat.Large"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_toStartOf="@+id/tv_profit_loss_percentage"
+                                    android:layout_toLeftOf="@+id/tv_profit_loss_percentage"
+                                    android:text="@string/profit_loss"
+                                    android:textColor="#112B4D"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_profit_loss_percentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/_0_000"
+                                    android:textColor="#112B4D"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:id="@+id/view_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/mcv_crypto_top_details" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_chart"
+                    android:background="@android:color/white">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_crypto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
+                        android:importantForAccessibility="no"
+                        tools:listitem="@layout/crypto_layout" />
+
+                    <include
+                        layout="@layout/no_data_layout"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_menus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/search"
+            android:src="@drawable/ic_filter"
+            app:backgroundTint="@color/primaryDarkColor"
+            app:fabSize="normal"
+            app:maxImageSize="30dp"
+            app:rippleColor="@color/colorWhite20"
+            app:tint="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fab_filter"
+            android:contentDescription="@string/search"
+            android:src="@drawable/ic_search"
+            app:backgroundTint="@color/primaryDarkColor"
+            app:fabSize="normal"
+            app:maxImageSize="30dp"
+            app:rippleColor="@color/colorWhite20"
+            app:tint="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fab_search"
+            android:contentDescription="@string/search"
+            android:src="@drawable/ic_plus"
+            app:backgroundTint="@color/primaryDarkColor"
+            app:fabSize="normal"
+            app:maxImageSize="30dp"
+            app:rippleColor="@color/colorWhite20"
+            app:tint="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/filter_bottom_sheet" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@id/nav_admin_main_fragment"
+        android:contentDescription="@string/main"
+        android:enabled="true"
+        android:icon="@drawable/ic_pie"
+        android:title="@string/main"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@id/nav_investors_fragment"
+        android:contentDescription="@string/navigate_to_history"
+        android:enabled="true"
+        android:icon="@drawable/ic_investors"
+        android:title="@string/investors"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@id/nav_profit_loss_fragment"
+        android:contentDescription="@string/profit_loss"
+        android:enabled="true"
+        android:icon="@drawable/ic_dollar"
+        android:title="@string/profit_loss"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@id/nav_history_fragment"
+        android:contentDescription="@string/navigate_to_history"
+        android:enabled="true"
+        android:icon="@drawable/ic_historic"
+        android:title="@string/history"
+        app:showAsAction="always" />
+
+</menu>

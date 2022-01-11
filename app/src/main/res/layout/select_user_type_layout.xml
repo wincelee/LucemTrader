@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/select_user_type_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:behavior_hideable="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_investor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:theme="@style/MaterialTheme"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp"
+            app:rippleColor="@color/mcvSplashRippleColors"
+            app:strokeWidth="0dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_investor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_separator_rl_main"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imv_investor"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:importantForAccessibility="no"
+                    android:padding="1dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_investor" />
+
+                <TextView
+                    android:id="@+id/tv_display_investor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toStartOf="@+id/imv_arrow_right"
+                    android:layout_toLeftOf="@+id/imv_arrow_right"
+                    android:layout_toEndOf="@+id/imv_investor"
+                    android:layout_toRightOf="@+id/imv_investor"
+                    android:padding="5dp"
+                    android:text="@string/investor"
+                    android:textColor="#464646"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imv_arrow_right"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    android:importantForAccessibility="no"
+                    android:padding="1dp"
+                    android:src="@drawable/ic_arrow_right" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcv_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mcv_investor"
+            android:clickable="true"
+            android:focusable="true"
+            android:theme="@style/MaterialTheme"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp"
+            app:rippleColor="@color/mcvSplashRippleColors"
+            app:strokeWidth="0dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_separator_rl_main"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imv_admin"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:importantForAccessibility="no"
+                    android:padding="1dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_admin" />
+
+                <TextView
+                    android:id="@+id/tv_display_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toStartOf="@+id/imv_arrow_right_admin"
+                    android:layout_toLeftOf="@+id/imv_arrow_right_admin"
+                    android:layout_toEndOf="@+id/imv_admin"
+                    android:layout_toRightOf="@+id/imv_admin"
+                    android:padding="5dp"
+                    android:text="@string/admin"
+                    android:textColor="#464646"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imv_arrow_right_admin"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    android:importantForAccessibility="no"
+                    android:padding="1dp"
+                    android:src="@drawable/ic_arrow_right" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "433517314896",
+    "firebase_url": "https://lucemtrader-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "lucemtrader",
+    "storage_bucket": "lucemtrader.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433517314896:android:e26cb838b9e7bbba3aa255",
+        "android_client_info": {
+          "package_name": "manu.apps.lucemtrader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433517314896-n8ecfreug5ctpanqqi873tanbs8km1ct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "manu.apps.lucemtrader",
+            "certificate_hash": "af8ee9ca66cf36b3e1c655f6179731219612c75f"
+          }
+        },
+        {
+          "client_id": "433517314896-ik6vd1hn2lf6rgeio7fg3t7vuq55qdbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvY9VR73XHZiOUk8PJ-TescHLaQ_oI0bM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433517314896-ik6vd1hn2lf6rgeio7fg3t7vuq55qdbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

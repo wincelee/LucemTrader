@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".fragments.PhoneNoFragment"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_separator_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorBlack10" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_separator_status_bar"
+            android:paddingTop="100dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imv_phone"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/civ_elevation_background"
+                android:importantForAccessibility="no"
+                android:padding="5dp"
+                android:src="@drawable/ic_phone"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_overlay="true"
+                app:civ_border_width="8dp"
+                app:civ_circle_background_color="#E7EAED" />
+
+            <TextView
+                android:id="@+id/tv_display_phone_no"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imv_phone"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/phone_number"
+                android:textColor="#112B4D"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_phone_description"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_display_phone_no"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/please_type_your_phone_n_number_and_country"
+                android:textAlignment="center"
+                android:textColor="#2F4663"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_country"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_phone_description"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                app:boxStrokeWidth="0.3dp"
+                app:boxStrokeWidthFocused="0.3dp"
+                app:boxBackgroundColor="#EFEFF2"
+                app:endIconTint="@color/primaryLightColor"
+                app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corner"
+                    app:ccp_defaultNameCode="US"
+                    app:ccp_contentColor="@android:color/darker_gray"
+                    app:ccp_textSize="15sp"
+                    app:ccp_showFullName="true" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--app:prefixText="+01&#160;-&#160;"-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_no"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/til_country"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                app:boxBackgroundColor="#EFEFF2"
+                app:boxStrokeWidth="0.3dp"
+                app:boxStrokeWidthFocused="0.3dp"
+                app:prefixText="+254"
+                app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/number"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:inputType="phone"
+                    android:maxLength="100"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_continue"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_no"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="@string/continue_text"
+                android:theme="@style/MaterialTheme"
+                app:icon="@drawable/ic_arrow_right_white"
+                app:iconGravity="end"
+                app:iconPadding="1dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

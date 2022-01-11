@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HistoryFragment"
+    android:background="@drawable/fragments_background">
+
+    <TextView
+        android:id="@+id/tv_display_history"
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/historic"
+        android:textAlignment="center"
+        android:textColor="#2F4663"
+        android:textSize="15sp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cg_historic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_display_history"
+        android:layout_centerHorizontal="true"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/c_withdrawals"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/withdrawals"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            app:chipBackgroundColor="@color/secondaryLightColor"
+            app:chipEndPadding="5dp"
+            app:chipIconSize="20dp"
+            app:chipIconTint="@android:color/white"
+            app:chipIconVisible="true"
+            app:chipStartPadding="10dp"
+            app:chipStrokeColor="@color/colorBlack40" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/c_deposits"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/deposits"
+            android:textAlignment="center"
+            android:textColor="#2F4663"
+            app:chipBackgroundColor="@android:color/white"
+            app:chipEndPadding="5dp"
+            app:chipIconSize="20dp"
+            app:chipIconTint="@android:color/white"
+            app:chipIconVisible="true"
+            app:chipStartPadding="10dp"
+            app:chipStrokeColor="@color/colorBlack40"
+            app:chipStrokeWidth="0.5dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cg_historic"
+        android:padding="15dp">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srl_historic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_historic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:importantForAccessibility="no"
+                    tools:listitem="@layout/crypto_layout" />
+
+                <include
+                    layout="@layout/no_data_layout"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

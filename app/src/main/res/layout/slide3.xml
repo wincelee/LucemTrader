@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="50dp">
+
+    <TextView
+        android:id="@+id/tv_welcome_to_slide_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/welcome_to"
+        android:textColor="#10294B"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_investor_app_slide_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_welcome_to_slide_3"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="30dp"
+        android:text="@string/investor_app"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="#929DAD" />
+
+    <ImageView
+        android:id="@+id/imv_slide_3"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/tv_investor_app_slide_3"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/track_your_investments_made_in_our_platform"
+        android:scaleType="centerInside"
+        android:src="@drawable/slide_image_3" />
+
+    <TextView
+        android:id="@+id/tv_description_slide_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imv_slide_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_horizontal"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:text="@string/track_your_profit_amp_loss_amount_and_percentage"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#304663"
+        android:textSize="20sp" />
+
+</RelativeLayout>

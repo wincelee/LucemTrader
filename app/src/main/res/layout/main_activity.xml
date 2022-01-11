@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#173051">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#173051">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/view_separator_status_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorWhite50" />
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/tb_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_below="@+id/view_separator_status_bar"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#173051"
+                    android:theme="@style/ToolbarMaterialTheme"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <!--  app:itemIconSize="25dp"-->
+                        <com.google.android.material.bottomnavigation.BottomNavigationView
+                            android:id="@+id/bnv_main"
+                            style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:theme="@style/BottomNavMaterialTheme"
+                            app:elevation="0dp"
+                            app:itemIconTint="@drawable/nav_selector"
+                            app:labelVisibilityMode="unlabeled" />
+
+                        <TextView
+                            android:id="@+id/tv_toolbar_title"
+                            style="@style/TextAppearance.AppCompat.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_horizontal"
+                            android:visibility="gone"
+                            android:textColor="@android:color/white"
+                            android:textAlignment="center"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:id="@+id/rl_search_view"
+                            android:visibility="gone">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btn_search_back"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerVertical="true"
+                                android:insetLeft="0dp"
+                                android:insetTop="0dp"
+                                android:insetRight="0dp"
+                                android:insetBottom="0dp"
+                                app:icon="@drawable/ic_back"
+                                app:iconGravity="textStart"
+                                app:iconTint="@color/secondaryLightColor"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                app:iconPadding="0dp"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_search"
+                                android:layout_centerHorizontal="true"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:padding="5dp"
+                                app:boxBackgroundColor="#455974"
+                                app:boxStrokeColor="@android:color/transparent"
+                                app:boxStrokeWidth="0.3dp"
+                                app:boxStrokeWidthFocused="0.3dp"
+                                app:endIconDrawable="@drawable/ic_search"
+                                app:endIconMode="custom"
+                                app:endIconTint="@android:color/white"
+                                app:hintEnabled="false"
+                                app:prefixTextColor="@android:color/white"
+                                android:layout_toEndOf="@+id/btn_search_back"
+                                android:layout_toRightOf="@+id/btn_search_back"
+                                app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_search"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/search_with_dots"
+                                    android:inputType="text"
+                                    android:maxLength="100"
+                                    android:textColor="@android:color/white"
+                                    android:textColorHint="@android:color/white"
+                                    android:textCursorDrawable="@null"
+                                    android:textSize="15sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </com.google.android.material.appbar.MaterialToolbar>
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar_layout"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation_graph" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white">
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

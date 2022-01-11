@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/bottom_sheet_rounded_top_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/bottom_sheet_rounded_top_white_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/civ_elevation_background.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/civ_elevation_background2.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/civ_profile_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/dialog_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/fragments_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/gray_bottom_sheet_view.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/nav_selector.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/rl_background.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/rl_background2.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/rounded_bottom_sheet.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/rounded_corner.xml" value="0.19907407407407407" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/roundedcorner.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/snackbar_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/stats_full.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/stats_progress.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/drawable/til_background.xml" value="0.22205128205128205" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/camera_gallery_bottom_sheet.xml" value="0.2" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/crypto_layout.xml" value="0.15" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/custom_progress_dialog_layout.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/edit_add_investors_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/edit_investors_fragment.xml" value="0.13768115942028986" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/error_exception_dialog_layout.xml" value="0.25" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/filter_bottom_sheet.xml" value="0.33" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/history_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/investors_fragment.xml" value="0.25" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/investors_layout.xml" value="0.5" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/main_activity.xml" value="0.25" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/main_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/no_data_layout.xml" value="0.1381340579710145" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/phone_no_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/profit_loss_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/rounded_bottom_sheet.xml" value="0.13768115942028986" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/select_user_type_layout.xml" value="0.2" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/slide1.xml" value="0.2" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/slide2.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/slide3.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/slides_fragment.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/splash_fragment.xml" value="0.16032608695652173" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/layout/verification_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/admin_bottom_nav_menu.xml" value="0.33" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/admin_clicked_investor_bottom_nav_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/admin_clicked_investor_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/admin_clicked_investor_overflow_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/bottom_nav_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/edit_add_investor_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/investor_bottom_nav_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/investors_reused_bottom_nav_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/main_admin_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/main_investor_menu.xml" value="0.209375" />
+        <entry key="..\:/Users/Emman/AndroidStudioProjects/LucemTrader/app/src/main/res/menu/main_menu.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

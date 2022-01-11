@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#173051"
+    tools:context=".fragments.EditAddInvestorsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_investor_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_investor_avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/civ_elevation_background"
+                    android:importantForAccessibility="no"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_gallery"
+                    app:civ_border_color="#455974"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="1dp"
+                    app:civ_circle_background_color="#455974" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_tvs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/btn_edit"
+                    android:layout_toLeftOf="@+id/btn_edit"
+                    android:layout_toEndOf="@+id/civ_investor_avatar"
+                    android:layout_toRightOf="@+id/civ_investor_avatar"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_display_investor"
+                        style="@style/TextAppearance.AppCompat.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:text="@string/investor"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_display_photo"
+                        style="@style/TextAppearance.AppCompat.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_display_investor"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:text="@string/photo"
+                        android:textAlignment="center"
+                        android:textColor="#cccccc" />
+
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_edit"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:padding="0dp"
+                    app:backgroundTint="@color/colorWhite"
+                    app:icon="@drawable/ic_camera"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="30dp"
+                    app:iconTint="@color/appBlueColor"
+                    app:rippleColor="@color/mcvRippleColor"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
+                    app:strokeColor="@color/colorBlack30"
+                    app:strokeWidth="1dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_display"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_investor_avatar"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_display_account"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="#173051"
+                    android:gravity="center_horizontal"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingEnd="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="1dp"
+                    android:text="@string/account"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <View
+                    android:id="@+id/view_separator_investor_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_display">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="#455974"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0.3dp"
+                    app:boxStrokeWidthFocused="0.3dp"
+                    app:endIconDrawable="@drawable/ic_edit_investor"
+                    app:endIconMode="custom"
+                    app:endIconTint="@android:color/white"
+                    app:hintEnabled="false"
+                    app:prefixText="@string/name_hint"
+                    app:prefixTextColor="@android:color/white"
+                    app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="username"
+                        android:hint="@string/name_hint"
+                        android:inputType="textPersonName"
+                        android:maxLength="100"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_username"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_name"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="#455974"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0.3dp"
+                    app:boxStrokeWidthFocused="0.3dp"
+                    app:endIconDrawable="@drawable/ic_edit_investor"
+                    app:endIconMode="custom"
+                    app:endIconTint="@android:color/white"
+                    app:hintEnabled="false"
+                    app:prefixText="@string/username_hint"
+                    app:prefixTextColor="@android:color/white"
+                    app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints="username"
+                        android:hint="@string/username_hint"
+                        android:inputType="textPersonName"
+                        android:maxLength="100"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_country"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_username"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="#455974"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0.3dp"
+                    app:boxStrokeWidthFocused="0.3dp"
+                    app:endIconDrawable="@drawable/ic_edit_investor"
+                    app:endIconMode="custom"
+                    app:endIconTint="@android:color/white"
+                    app:hintEnabled="false"
+                    app:prefixText="@string/country_hint"
+                    app:prefixTextColor="@android:color/white"
+                    app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/country_hint"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_phone_no"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_country"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="#455974"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0.3dp"
+                    app:boxStrokeWidthFocused="0.3dp"
+                    app:endIconDrawable="@drawable/ic_edit_investor"
+                    app:endIconMode="custom"
+                    app:endIconTint="@android:color/white"
+                    app:hintEnabled="false"
+                    app:prefixText="@string/phone_number_hint"
+                    app:prefixTextColor="@android:color/white"
+                    app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phone_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone_number_hint"
+                        android:inputType="phone"
+                        android:maxLength="100"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_security_code"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_phone_no"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="#455974"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0.3dp"
+                    app:boxStrokeWidthFocused="0.3dp"
+                    app:endIconDrawable="@drawable/ic_edit_investor"
+                    app:endIconMode="custom"
+                    app:endIconTint="@android:color/white"
+                    app:hintEnabled="false"
+                    app:prefixText="@string/security_code_hint"
+                    app:prefixTextColor="@android:color/white"
+                    app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_security_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/security_code_hint"
+                        android:inputType="textPassword"
+                        android:maxLength="100"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_date_joined"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_security_code"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="#455974"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0.3dp"
+                    app:boxStrokeWidthFocused="0.3dp"
+                    app:endIconDrawable="@drawable/ic_edit_investor"
+                    app:endIconMode="custom"
+                    app:endIconTint="@android:color/white"
+                    app:hintEnabled="false"
+                    app:prefixText="@string/date_joined_hint"
+                    app:prefixTextColor="@android:color/white"
+                    app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_date_joined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/date_joined_hint"
+                        android:inputType="none"
+                        android:maxLength="100"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_shared_agreed"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/til_date_joined"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:padding="5dp"
+                    app:boxBackgroundColor="#455974"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0.3dp"
+                    app:boxStrokeWidthFocused="0.3dp"
+                    app:endIconDrawable="@drawable/ic_edit_investor"
+                    app:endIconMode="custom"
+                    app:endIconTint="@android:color/white"
+                    app:hintEnabled="false"
+                    app:prefixText="@string/shared_agreed_hint"
+                    app:prefixTextColor="@android:color/white"
+                    app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_shared_agreed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/shared_agreed_hint"
+                        android:inputType="text"
+                        android:maxLength="100"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/camera_gallery_bottom_sheet" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

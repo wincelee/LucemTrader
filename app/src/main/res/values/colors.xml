@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primaryColor">#122641</color>
+    <color name="primaryLightColor">#173051</color>
+    <color name="primaryDarkColor">#173051</color>
+    <color name="secondaryColor">#398f3c</color>
+    <color name="secondaryLightColor">#52cc56</color>
+    <color name="secondaryDarkColor">#215222</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+
+    <color name="mcvRippleColor">#33ED9905</color>
+    <color name="mcvSplashRippleColors">#e6e6e6</color>
+
+    <color name="mcvRippleSecondaryLightColor15">#2652CC56</color>
+
+    <color name="grayColor">#FAFAFA</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorWhite50">#80FFFFFF</color>
+
+    <color name="colorWhite20">#33FFFFFF</color>
+
+    <color name="appBlueColor">#173051</color>
+
+    <color name="appRedColor">#EB6060</color>
+
+    <color name="textBlueColor">#173051</color>
+
+    <color name="colorBlack80">#CC000000</color>
+    <color name="colorBlack60">#CC000000</color>
+    <color name="colorBlack50">#80000000</color>
+    <color name="colorBlack40">#66000000</color>
+    <color name="colorBlack30">#4D000000</color>
+    <color name="colorBlack20">#33000000</color>
+    <color name="colorBlack10">#1A000000</color>
+    <color name="colorBlack5">#0D000000</color>
+
+</resources>

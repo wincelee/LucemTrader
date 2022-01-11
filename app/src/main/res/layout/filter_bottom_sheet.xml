@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/filter_bottom_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:behavior_hideable="true"
+    android:background="@drawable/bottom_sheet_rounded_top_background"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_separator_drop_down"
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/hide_show_bottom_sheet_view"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_display_filter_by"
+            android:layout_below="@+id/view_separator_drop_down"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/filter_by"
+            android:textAlignment="center"
+            android:textColor="#2F4663"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_filter_by_coin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_display_filter_by"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            app:boxStrokeWidth="0.3dp"
+            app:boxStrokeColor="#E1E1E5"
+            app:boxBackgroundColor="#EFEFF2"
+            app:prefixText="@string/coin"
+            app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_filter_by_coin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:completionThreshold="1"
+                android:dropDownSelector="@color/secondaryLightColor"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:hint="@string/filter_by_coin"
+                android:inputType="none"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_filter_by_amount"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_filter_by_coin"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            app:boxStrokeWidth="0.3dp"
+            app:boxStrokeColor="#E1E1E5"
+            app:boxBackgroundColor="#EFEFF2"
+            app:prefixText="@string/coin"
+            app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_filter_by_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:completionThreshold="1"
+                android:dropDownSelector="@color/secondaryLightColor"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:hint="@string/filter_by_amount"
+                android:inputType="none"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_filter_by_date"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_filter_by_amount"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            app:boxStrokeWidth="0.3dp"
+            app:boxStrokeColor="#E1E1E5"
+            app:boxBackgroundColor="#EFEFF2"
+            app:prefixText="@string/coin"
+            app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_filter_by_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:completionThreshold="1"
+                android:dropDownSelector="@color/secondaryLightColor"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:hint="@string/filter_by_date"
+                android:inputType="none"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_filter_by_show"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/til_filter_by_date"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            app:boxStrokeWidth="0.3dp"
+            app:boxStrokeColor="#E1E1E5"
+            app:boxBackgroundColor="#EFEFF2"
+            app:prefixText="@string/coin"
+            app:shapeAppearanceOverlay="@style/RoundedTextInputLayout">
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_filter_by_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:completionThreshold="1"
+                android:dropDownSelector="@color/secondaryLightColor"
+                android:focusable="true"
+                android:focusableInTouchMode="false"
+                android:hint="@string/filter_by_show"
+                android:inputType="none"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_apply_filter"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/til_filter_by_show"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="@string/apply_filter"
+            android:theme="@style/MaterialTheme"
+            app:icon="@drawable/ic_arrow_right_white"
+            app:iconGravity="end"
+            app:iconPadding="1dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

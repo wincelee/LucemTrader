@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/group_account_support_settings">
+        <item
+            android:id="@+id/action_investor_account"
+            android:orderInCategory="1"
+            android:title="@string/account"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_support"
+            android:orderInCategory="2"
+            android:title="@string/support"
+            app:showAsAction="never" />
+
+        <item
+            android:id="@+id/action_investor_settings"
+            android:orderInCategory="3"
+            android:title="@string/settings"
+            app:showAsAction="never" />
+
+    </group>
+
+    <group android:id="@+id/group_investor_log_out">
+        <item
+            android:id="@+id/action_investor_log_out"
+            android:orderInCategory="4"
+            android:title="@string/logout"
+            app:showAsAction="never" />
+    </group>
+
+</menu>
