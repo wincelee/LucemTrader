@@ -662,7 +662,7 @@ public class EditAddInvestorsFragment extends Fragment implements View.OnClickLi
 
                                     dismissProgressDialog();
 
-                                    Config.showSnackBar(requireActivity(), "Investor was added successfully", 0,
+                                    Config.showSnackBar(requireActivity(), "Investor was added successfully...", 0,
                                             Snackbar.LENGTH_LONG);
 
 //                                                    navController.navigateUp();
