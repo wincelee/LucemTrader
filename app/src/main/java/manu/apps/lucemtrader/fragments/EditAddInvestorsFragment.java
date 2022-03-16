@@ -630,7 +630,7 @@ public class EditAddInvestorsFragment extends Fragment implements View.OnClickLi
 
     private void addInvestor(String name, String username,
                              String country, String phoneNo,
-                             String securityCode, String sharedAgreed,){
+                             String securityCode, String sharedAgreed){
 
         final StorageReference avatarStorageReference = firebaseDao.returnRootFirebaseStorage()
                 .getReference("InvestorsAvatar")

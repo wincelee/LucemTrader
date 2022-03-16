@@ -4,7 +4,8 @@ plugins {
 
 android {
     compileSdk 32
-
+    compileSdkVersion 32
+    buildToolsVersion '32.1.0 rc1'
     defaultConfig {
         applicationId "manu.apps.lucemtrader"
         minSdk 16
@@ -27,14 +28,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    compileSdkVersion 32
-    buildToolsVersion '32.0.0'
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -44,13 +43,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Navigation
-    def nav_version = "2.3.5"
+    def nav_version = "2.4.0"
 
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
 
     // Material
-    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.google.android.material:material:1.5.0'
 
     // Circle Image view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
@@ -63,7 +62,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     // PlayStore core libraries - (App Update)
-    implementation 'com.google.android.play:core:1.10.2'
+    implementation 'com.google.android.play:core:1.10.3'
 
     // Swipe to refresh layout
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
